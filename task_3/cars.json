@@ -1,0 +1,44 @@
+[
+  {
+    "id": 1,
+    "name": "Model S",
+    "manufacturer": "Tesla",
+    "is_petrol": false,
+    "tank_volume": 0
+  },
+  {
+    "id": 2,
+    "name": "Camry",
+    "manufacturer": "Toyota",
+    "is_petrol": true,
+    "tank_volume": 60
+  },
+  {
+    "id": 3,
+    "name": "A4",
+    "manufacturer": "Audi",
+    "is_petrol": true,
+    "tank_volume": 55
+  },
+  {
+    "id": 4,
+    "name": "Leaf",
+    "manufacturer": "Nissan",
+    "is_petrol": false,
+    "tank_volume": 0
+  },
+  {
+    "id": 5,
+    "name": "X5",
+    "manufacturer": "BMW",
+    "is_petrol": true,
+    "tank_volume": 85
+  },
+  {
+    "id": 6,
+    "name": "Solaris",
+    "manufacturer": "Hyundai",
+    "is_petrol": true,
+    "tank_volume": 50
+  }
+]
