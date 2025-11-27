@@ -30,8 +30,8 @@ def main():
     try:
         result1 = isCollisionRect(rect3, rect4)
         result2 = isCollisionRect(rect5, rect6)
-        print(f"   isCollisionRect(rect3, rect4) = {result1}")
-        print(f"   isCollisionRect(rect5, rect6) = {result2}")
+        print(f"   isCollisionRect([(-3.4, 1), (9.2, 10)], [(-7.4, 0), (13.2, 12)]) = {result1}")
+        print(f"   isCollisionRect([(1, 1), (2, 2)], [(3, 0), (13, 1)]) = {result2}")
     except RectCorrectError as e:
         print(f"   Ошибка: {e}")
     
@@ -39,8 +39,8 @@ def main():
     try:
         area1 = intersectionAreaRect([(-3, 1), (9, 10)], [(-7, 0), (13, 12)])
         area2 = intersectionAreaRect([(1, 1), (2, 2)], [(3, 0), (13, 1)])
-        print(f"   intersectionAreaRect(rect1, rect2) = {area1}")
-        print(f"   intersectionAreaRect(rect3, rect4) = {area2}")
+        print(f"   intersectionAreaRect([(-3, 1), (9, 10)], [(-7, 0), (13, 12)]) = {area1}")
+        print(f"   intersectionAreaRect([(1, 1), (2, 2)], [(3, 0), (13, 1)]) = {area2}")
     except (ValueError, RectCorrectError) as e:
         print(f"   Ошибка: {e}")
     
@@ -56,6 +56,17 @@ def main():
         print(f"   intersectionAreaMultiRect(4 прямоугольника) = {multi_area}")
     except RectCorrectError as e:
         print(f"   Ошибка: {e}")
+    
+    print("\n5. Демонстрация обработки ошибок:")
+    try:
+        isCollisionRect([(1, 1), (2, 2)], [(3, 17), (13, 1)])
+    except RectCorrectError as e:
+        print(f"   Ошибка RectCorrectError: {e}")
+    
+    try:
+        intersectionAreaRect([(1, 1), (2, 2)], [(3, 17), (13, 1)])
+    except ValueError as e:
+        print(f"   Ошибка ValueError: {e}")
     
     print("\n" + "=" * 60)
     print("Демонстрация завершена!")
